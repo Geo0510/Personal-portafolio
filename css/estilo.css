@@ -1,0 +1,271 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+figure {
+  margin: 0;
+}
+
+.image_text {
+  font-size: 25px;
+}
+
+.main {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1400px)); */
+  grid-template-areas: 
+  "welcome" 
+  "projects" 
+  "contact_information";
+  gap: 2.5em;
+  background-color: #45567D;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70px;
+  background-color: #1b3057;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #2A344B;
+  z-index: 10;
+}
+
+.nav_links {
+  display: grid;
+  grid-template-columns: repeat(2, 100px) 120px;
+  width: 350px;
+}
+
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+}
+
+.nav_link:hover {
+  background-color: #45567D;
+  cursor: pointer;
+}
+
+#welcome-section {
+  background-color: #212123;
+  min-height: 100vh;
+  display: grid;
+  place-items: end;
+  color: #fff;
+  grid-area: welcome;
+}
+
+.background_image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 0;
+  opacity: 0.5; 
+}
+
+.title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 1em;
+}
+
+.title_name {
+  font-size: 3.5em;
+  z-index: 9;
+}
+
+.title_job {
+  font-size: 25px;
+}
+
+#projects {
+  background-color: #45567D;
+  width: 100%;
+  color: #fff;
+  grid-area: projects;
+}
+
+#projects h2 {
+  display: inline-block;
+  font-size: 35px;
+  border-bottom: 2px solid #fff;
+  padding: 5px;
+  margin-top: 80px;
+  width: 50%;
+}
+
+.projects_tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  gap: 2.5em;
+  justify-content: center;
+}
+
+.projects_tiles_2 {
+  display: grid;
+  place-items: center;
+}
+
+.btn_show {
+  display: block;
+  text-decoration: none;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  padding: 5px 20px;
+  font-size: 25px;
+  background-color: #303841;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn_show:hover {
+  transition: all ease-out 1s;
+  background-color: #0d1f41;
+}
+
+.project-tile {
+  background-color: #303841;
+  text-decoration: none;
+  color: #fff;
+}
+
+.project-tile span {
+  color: #303841;
+}
+
+.project-tile:hover span {
+  color: #0d1f41;
+  transition: all ease-out 0.5s;
+  font-weight: 600;
+}
+
+.section_contact {
+  border-bottom: 3px solid #0d1f41;
+  min-height: 85vh;
+  background-color: #303841;
+  display: grid;
+  place-items: center;
+  grid-area: contact_information;
+  color: #fff;
+}
+
+.section_contact-text,
+.section_contact-title {
+  display: inline-block;
+  width: 100%;
+}
+
+.section_contact-title {
+  font-size: 3.5rem;
+  line-height: 0.8em;
+}
+
+.section_contact-text {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.contact_link {
+  color: #fff;
+  margin-right: 30px;
+  font-size: 1.5rem;
+  position: relative;
+  top: 0;
+  transition: all ease-out 0.5s;
+}
+
+.contact_link:hover {
+  top: 25%;
+}
+
+.footer_contact {
+  background-color: #303841;
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 15vh;
+}
+
+.footer_contact p {
+  margin-right: 10px;
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+
+  .background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 50%;
+  }
+
+  #welcome-section {
+    display: grid;
+    place-items: center;
+  }
+
+  .title_name {
+    font-size: 2.5em;
+    z-index: 9;
+  }
+  
+  .title_job {
+    font-size: 20px;
+  }
+
+  #projects h2 {
+    font-size: 25px;
+  }
+
+  .contact_link {
+    display: inline-block;
+    width: 100%;
+    margin: 0.9em 0;
+  }
+
+  .contact_link:hover {
+    top: 10%;
+  }
+
+  .footer_contact {
+    justify-content: center;
+  }
+}
