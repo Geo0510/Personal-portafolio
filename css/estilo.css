@@ -229,6 +229,10 @@ figure {
     font-size: 14px;
   }
 
+  .nav {
+    justify-content: center;
+  }
+
   .background_image {
     position: absolute;
     top: 0;
@@ -265,7 +269,12 @@ figure {
     top: 10%;
   }
 
+  .section_contact-title {
+    font-size: 3rem;
+  }
+
   .footer_contact {
+    width: 100%;
     justify-content: center;
   }
 }
